@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+  </head>
+  <body>
+      <script>
+         // 깊은 복사
+         // concat, filter, map, slice, 스프레드 연산자
+        const a = [1,2,3];
+        const b = [...a];
+        console.log("1. ======================= 스프레드 연산자");
+        b.push(4);
+        console.log(`a의 값은 : ${a}`); // 1 2 3
+        console.log(`b의 값은 : ${b}`); // 1 2 3 4
+
+        console.log("2. ======================= 추가하기");
+        const a2 = [1,2,3];
+        const b2 = a2.concat(4);
+        console.log(`a의 값은 : ${a2}`); // 1 2 3
+        console.log(`b의 값은 : ${b2}`); // 1 2 3 4
+
+        console.log("3. ======================= 걸러내기");
+        const a3 = [1,2,3];
+        const b3 = a3.filter(() => {});
+        console.log(`a의 값은 : ${a2}`); // 1 2 3
+        console.log(`b의 값은 : ${b2}`); // 1 2 3 4
+      </script>
+  </body>
+</html>

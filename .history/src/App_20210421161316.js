@@ -6,11 +6,7 @@ function App() {
 
   return (
     <div>
-      <div>
-        {list.map((n) => (
-          <h1>{n}</h1>
-        ))}
-      </div>
+      <div style={mystyle}>안녕 {a === 10 ? '10 맞음' : '10 아님'}</div>
     </div>
   );
 }

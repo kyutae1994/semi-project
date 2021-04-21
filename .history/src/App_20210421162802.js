@@ -7,10 +7,7 @@ function App() {
   return (
     <div>
       <div>
-        {list.map((n) => (
-          <h1>{n}</h1>
-        ))}
-      </div>
+        {list.map((n) => <h1>{n}</h1>)} </div>
     </div>
   );
 }
