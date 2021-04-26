@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 // useMemo => 메모라이제이션(기억)
@@ -13,19 +13,8 @@ function App() {
     console.log('sum', sum);
     return sum;
   };
-
-  const addResult = useMemo(() => getAddResult(), [list]);
-
   return (
     <div>
-      <button
-        onClick={() => {
-          setStr('안녕');
-        }}
-      >
-        문자 변경
-      </button>
-
       <button
         onClick={() => {
           setList([...list, 10]);
@@ -39,7 +28,7 @@ function App() {
         ))}
       </div>
       <div>
-        {str}: {addResult}
+        {str}: {getAddResult()}
       </div>
     </div>
   );

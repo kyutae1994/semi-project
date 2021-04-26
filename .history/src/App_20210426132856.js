@@ -7,15 +7,14 @@ function App() {
   const [list, setList] = useState([1, 2, 3, 4]);
   const [str, setStr] = useState('합계');
 
+  const addResult = useMemo(() => getAddResult(), { list });
+
   const getAddResult = () => {
     let sum = 0;
     list.forEach((i) => (sum = sum + i));
     console.log('sum', sum);
     return sum;
   };
-
-  const addResult = useMemo(() => getAddResult(), [list]);
-
   return (
     <div>
       <button
@@ -39,7 +38,7 @@ function App() {
         ))}
       </div>
       <div>
-        {str}: {addResult}
+        {str}: {getAddResult()}
       </div>
     </div>
   );
