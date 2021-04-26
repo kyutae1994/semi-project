@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [data, setData] = useState(0);
-  const [search, setSearch] = useState(0);
+  const [search, setSearch] = useState();
 
   const download = () => {
     // 다운로드 받고 (통신)
@@ -13,7 +13,7 @@ function App() {
 
   // 실행시점:
   // (1) App() 그림이 최소 그려질 때
-  // (2) 상태 변수가 변경될 때 (그게 dependencyList에 등록되어 있어야함)
+  // (2) 상태 변수가 변경될 때
   // (3) 의존리스트 관리를 할 수 있음
   useEffect(() => {
     console.log('useEffect 실행됨');
