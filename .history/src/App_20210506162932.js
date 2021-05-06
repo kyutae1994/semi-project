@@ -17,15 +17,14 @@ function App() {
       <button
         onClick={() => {
           console.log(myRef.current);
-          // myRef.current.style.backgroundColor = 'red';
-          myRefs[0].current.style.backgroundColor = 'red';
+          myRef.current.style.backgroundColor = 'red';
         }}
       >
         색 변경
       </button>
       <div ref={myRef}>박스</div>
       {list.map((user, index) => (
-        <h1 ref={myRefs[index]}>{user.name}</h1>
+        <h1 ref={myRefs[3]}>{user.name}</h1>
       ))}
     </div>
   );

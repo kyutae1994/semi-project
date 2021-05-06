@@ -17,8 +17,7 @@ function App() {
       <button
         onClick={() => {
           console.log(myRef.current);
-          // myRef.current.style.backgroundColor = 'red';
-          myRefs[0].current.style.backgroundColor = 'red';
+          myRef.current.style.backgroundColor = 'red';
         }}
       >
         색 변경
